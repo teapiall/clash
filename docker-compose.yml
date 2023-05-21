@@ -3,10 +3,10 @@ version: "3"
 services:
   # Clash
   svc-clash:
-    image: dreamacro/clash:v1.10.6
+    image: dreamacro/clash
     container_name: svc-clash
     volumes:
-      - ./config.yaml:/root/.config/clash/config.yaml
+      - "~/teapiall/clash/config.yaml:/root/.config/clash/config.yaml"
     ports:
       - "7890:7890/tcp"
       - "7890:7890/udp"
@@ -19,7 +19,7 @@ services:
     image: centralx/clash-dashboard
     container_name: svc-clash-dashboard
     ports:
-      - "8081:80"
+      - "80:80"
     restart: always
     networks:
       - default
