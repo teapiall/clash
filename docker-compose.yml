@@ -19,7 +19,7 @@ services:
     image: centralx/clash-dashboard
     container_name: svc-clash-dashboard
     ports:
-      - "8000:80"
+      - "80:80"
     restart: always
     networks:
       - default
