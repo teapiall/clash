@@ -1,0 +1,310 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+hosts:
+  .googleapis.cn: 142.250.196.131
+  .google.cn: 142.250.196.131
+proxies:
+  - {name: "[VMess] 🇨🇦 _CA_加拿大", server: 108.181.10.17, port: 80, type: vmess, uuid: 474e8680-701f-11ee-b436-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost", server: 45.147.201.231, port: 23109, type: vmess, uuid: e263fe17-eb9f-4bd3-826d-e6a017667173, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点", server: 104.21.64.1, port: 8443, type: vmess, uuid: f10598e2-c606-4945-bfde-e5730756a2dd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us01.sh-cloudflare.sbs}}, udp: true, tfo: false}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 2", server: 104.17.25.173, port: 8880, type: vmess, uuid: e7e26f7b-c4d8-3856-9c9a-dbb98f97fd6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /dabai.in104.25.200.4, headers: {Host: 100-235-132-47.s5.db-link02.top}}, udp: true, tfo: false}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 5", server: 104.18.149.76, port: 443, type: vmess, uuid: de94cc0a-0592-4969-b1fc-97ea8f0ea0b3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: us.kkp.me.eu.org}}, udp: true, tfo: false}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 6", server: eERRRty6.999824.xyz, port: 443, type: vmess, uuid: 512d9674-db12-44ca-a1b5-654244549b65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /uiAxvH6OkVk0VCfa7dX3JIrYk7zm, headers: {Host: eerrrty6.999824.xyz}}, udp: true, tfo: false}
+  - {name: "[VMess] 🇺🇸 美国 CloudFlare节点 7", server: xcvBnMjKi.999824.xyZ, port: 443, type: vmess, uuid: 512d9674-db12-44ca-a1b5-654244549b65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /uiAxvH6OkVk0VCfa7dX3JIrYk7zm, headers: {Host: xcvBnMjKi.999824.xyZ}}, udp: true, tfo: false}
+proxy-groups:
+  - name: 🚀 全球互联
+    type: select
+    proxies:
+      - 🚀 全部节点
+  - name: 🚀 全部节点
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - "[VMess] 🇨🇦 _CA_加拿大"
+      - "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - "[VMess] 🇨🇦 _CA_加拿大"
+      - "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: 📹 Youtube
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - "[VMess] 🇨🇦 _CA_加拿大"
+      - "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: ▶️ Disney+
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - "[VMess] 🇨🇦 _CA_加拿大"
+      - "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 全球互联
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - "[VMess] 🇨🇦 _CA_加拿大"
+      - "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: 📲 Telegram
+    type: select
+    proxies:
+      - 🚀 全球互联
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - "[VMess] 🇨🇦 _CA_加拿大"
+      - "[VMess] 🇷🇺 俄罗斯 莫斯科JustHost"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: 🇭🇰 香港
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🇯🇵 日本
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🇺🇲 美国
+    type: select
+    proxies:
+      - "[VMess] 🇺🇸 美国 CloudFlare节点"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 2"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 3"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 4"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 5"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 6"
+      - "[VMess] 🇺🇸 美国 CloudFlare节点 7"
+  - name: 🇹🇼 台湾
+    type: select
+    proxies:
+  - name: 🇸🇬 新加坡
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 全球互联
+script:
+  shortcuts:
+    bilibilishit: any([word in host for word in ['biliapi', 'bilibili']]) and any([word in host for word in ['-live-tracker-', 'p2p', 'pcdn']])
+    douyushit: (network == 'udp' or 'p2p' in host) and 'douyu' in host
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - DOMAIN,downloads.ti.com,DIRECT
+  - DOMAIN,cdn.bootcdn.net,DIRECT
+  - DOMAIN,crl4.digicert.com,DIRECT
+  - DOMAIN,ocsp.digicert.com,DIRECT
+  - DOMAIN,statusf.digitalcertvalidation.com,DIRECT
+  - DOMAIN,ocsp.verisign.com,DIRECT
+  - DOMAIN,static.assetlab.io,DIRECT
+  - DOMAIN,stats.114515.best,DIRECT
+  - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
+  - DOMAIN,alt1-mtalk.google.com,DIRECT
+  - DOMAIN,alt2-mtalk.google.com,DIRECT
+  - DOMAIN,alt3-mtalk.google.com,DIRECT
+  - DOMAIN,alt4-mtalk.google.com,DIRECT
+  - DOMAIN,alt5-mtalk.google.com,DIRECT
+  - DOMAIN,alt6-mtalk.google.com,DIRECT
+  - DOMAIN,alt7-mtalk.google.com,DIRECT
+  - DOMAIN,alt8-mtalk.google.com,DIRECT
+  - DOMAIN,mtalk.google.com,DIRECT
+  - IP-CIDR,64.233.177.188/32,DIRECT,no-resolve
+  - IP-CIDR,64.233.186.188/32,DIRECT,no-resolve
+  - IP-CIDR,64.233.187.188/32,DIRECT,no-resolve
+  - IP-CIDR,64.233.188.188/32,DIRECT,no-resolve
+  - IP-CIDR,64.233.189.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.23.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.24.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.28.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.127.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.137.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.203.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.204.188/32,DIRECT,no-resolve
+  - IP-CIDR,74.125.206.188/32,DIRECT,no-resolve
+  - IP-CIDR,108.177.125.188/32,DIRECT,no-resolve
+  - IP-CIDR,142.250.4.188/32,DIRECT,no-resolve
+  - IP-CIDR,142.250.10.188/32,DIRECT,no-resolve
+  - IP-CIDR,142.250.31.188/32,DIRECT,no-resolve
+  - IP-CIDR,142.250.96.188/32,DIRECT,no-resolve
+  - IP-CIDR,172.217.194.188/32,DIRECT,no-resolve
+  - IP-CIDR,172.217.218.188/32,DIRECT,no-resolve
+  - IP-CIDR,172.217.219.188/32,DIRECT,no-resolve
+  - IP-CIDR,172.253.63.188/32,DIRECT,no-resolve
+  - IP-CIDR,172.253.122.188/32,DIRECT,no-resolve
+  - IP-CIDR,173.194.175.188/32,DIRECT,no-resolve
+  - IP-CIDR,173.194.218.188/32,DIRECT,no-resolve
+  - IP-CIDR,209.85.233.188/32,DIRECT,no-resolve
+  - DOMAIN,aefd.nelreports.net,🌍 国外媒体
+  - DOMAIN,ftp.fau.de,🌍 国外媒体
+  - DOMAIN,legendspatch-lol.cdn.x-cdn.com,🌍 国外媒体
+  - DOMAIN,opgg-desktop-patch.akamaized.net,🌍 国外媒体
+  - DOMAIN,opgg-desktop-data.akamaized.net,🌍 国外媒体
+  - DOMAIN,opgg-static.akamaized.net,🌍 国外媒体
+  - DOMAIN,opggsupport.zendesk.com,🌍 国外媒体
+  - DOMAIN,epicgames-download1.akamaized.net,🌍 国外媒体
+  - DOMAIN,fastly-download.epicgames.com,🌍 国外媒体
+  - DOMAIN,download.epicgames.com,🌍 国外媒体
+  - DOMAIN,download2.epicgame.com,🌍 国外媒体
+  - DOMAIN,download3.epicgames.com,🌍 国外媒体
+  - DOMAIN,download4.epicgames.com,🌍 国外媒体
+  - DOMAIN,cloudflare.epicgamescdn.com,🌍 国外媒体
+  - DOMAIN,nrk-od-world-52.akamaized.net,🌍 国外媒体
+  - DOMAIN,mirror.cyberbits.eu,🌍 国外媒体
+  - DOMAIN,ftp.lysator.liu.se,🌍 国外媒体
+  - DOMAIN,apt.izzysoft.de,🌍 国外媒体
+  - DOMAIN,zh.savefrom.net,🌍 国外媒体
+  - DOMAIN,dl.fevr.top,🌍 国外媒体
+  - DOMAIN,download.sysinternals.com,🌍 国外媒体
+  - DOMAIN,winscp-static-746341.c.cdn77.org,🌍 国外媒体
+  - DOMAIN,edgedl.me.gvt1.com,🌍 国外媒体
+  - DOMAIN,downloadfiles.idera.com,🌍 国外媒体
+  - DOMAIN,ftp.ni.com,🌍 国外媒体
+  - DOMAIN,mirror.ossplanet.net,🌍 国外媒体
+  - DOMAIN,ftp.agdsn.de,🌍 国外媒体
+  - DOMAIN,debian.map.fastlydns.net,🌍 国外媒体
+  - DOMAIN,cdn.tailwindcss.com,🌍 国外媒体
+  - DOMAIN,sb.adtidy.org,🌍 国外媒体
+  - DOMAIN,dl-cdn.alpinelinux.org,🌍 国外媒体
+  - DOMAIN,cdn-fastly.obsproject.com,🌍 国外媒体
+  - DOMAIN,res.lolli.tech,🌍 国外媒体
+  - DOMAIN,download.todesktop.com,🌍 国外媒体
+  - DOMAIN,plug-mirror.rcac.purdue.edu,🌍 国外媒体
+  - DOMAIN,download.amd.com,🌍 国外媒体
+  - DOMAIN,i.mij.rip,🌍 国外媒体
+  - DOMAIN,mjj.today,🌍 国外媒体
+  - DOMAIN,ice.frostsky.com,🌍 国外媒体
+  - DOMAIN,image.mooncloud.top,🌍 国外媒体
+  - DOMAIN,i.111666.best,🌍 国外媒体
+  - DOMAIN,image.acg.lol,🌍 国外媒体
+  - DOMAIN,ncs.lnk.to,🌍 国外媒体
+  - DOMAIN,rstatus.nxnow.top,🚀 全球互联
+  - DOMAIN,aagit.yougotme.cc,🚀 全球互联
+  - DOMAIN,pub-f6afb74f13c64cd89561b4714dca1c27.r2.dev,🚀 全球互联
+  - DOMAIN,api.leo.moe,🚀 全球互联
+  - DOMAIN,api.deeplx.org,🚀 全球互联
+  - DOMAIN,rsshub.app,🚀 全球互联
+  - DOMAIN,flowerss-bot.now.sh,🚀 全球互联
+  - DOMAIN,blog.aiservices.tech,🚀 全球互联
+  - DOMAIN,securepubads.g.doubleclick.net,🚀 全球互联
+  - DOMAIN,pagead2.googlesyndication.com,🚀 全球互联
+  - DOMAIN,share.acgnx.se,🚀 全球互联
+  - DOMAIN,129888.xyz,🚀 全球互联
+  - DOMAIN,net-tutorials.onfastspring.com,🚀 全球互联
+  - DOMAIN,immersive-translate.owenyoung.com,🚀 全球互联
+  - DOMAIN,clash.razord.top,🚀 全球互联
+  - DOMAIN,yacd.haishan.me,🚀 全球互联
+  - DOMAIN,yacd.metacubex.one,🚀 全球互联
+  - DOMAIN,ariang.mayswind.net,🚀 全球互联
+  - IP-CIDR,35.190.71.189/32,🚀 全球互联
+  - DOMAIN,rss.nxnow.top,🚀 全球互联
+  - IP-CIDR,1.1.1.1/32,🚀 全球互联
+  - IP-CIDR,1.0.0.1/32,🚀 全球互联
+  - DOMAIN,ws-eu.pusher.com,🚀 全球互联
+  - DOMAIN,cdn.usefathom.com,🚀 全球互联
+  - DOMAIN,ai.google.dev,🚀 全球互联
+  - DOMAIN,makersuite.google.com,🚀 全球互联
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com,🚀 全球互联
+  - DOMAIN,labs.google.com,🚀 全球互联
+  - DOMAIN,aistudio.google.com,🚀 全球互联
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,🚀 全球互联
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net,🚀 全球互联
+  - DOMAIN,production-openaicom-storage.azureedge.net,🚀 全球互联
+  - DOMAIN,sdkapi.netmera.com,🚀 全球互联
+  - MATCH,🐟 漏网之鱼
